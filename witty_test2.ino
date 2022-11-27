@@ -10,7 +10,7 @@ const int GREEN = 12;
 const int BLUE = 13;
 
 int intensitate;
-int culoare = 8;  // er = 1, ge = 1, be = 1
+int culoare = 7;  // er = 1, ge = 1, be = 1
 int er, ge, be;
 
 void setup() 
@@ -23,7 +23,7 @@ void setup()
     pinMode(GREEN, OUTPUT);
     pinMode(BLUE, OUTPUT);
 
- er = culoare / 4;
+    er = culoare / 4;
     ge = (culoare % 4 ) / 2;
     be = (culoare % 4 ) % 2;    
 
@@ -40,7 +40,7 @@ void loop()
   if (btn_Status == LOW) // Button pushed, so do something
    {                
     culoare = culoare + 1;
-    if (culoare > 8) culoare = 1;
+    if (culoare > 7) culoare = 1;
     er = culoare / 4;
     ge = (culoare % 4 ) / 2;
     be = (culoare % 4 ) % 2;    
